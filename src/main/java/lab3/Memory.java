@@ -1,8 +1,8 @@
 package lab3;
 
 public class Memory {
-    /*раздел объявления приватных переменных класса */
-    private final int mhz = 2133;
+    /*раздел объявления приватных переменных класса и конструктора доступнго в пределах пакета*/
+    private final int mhz = 2133; //константа
     private int sizeRam;
     private String type;
 

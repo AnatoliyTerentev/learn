@@ -1,18 +1,15 @@
 package lab3;
 
-import sun.security.krb5.Config;
-
-class Computer {
+public class Computer {
     /*Раздел объявления переменных класса Computer*/
     private HardDisk hardDisk;
     private Memory memory;
     private MotherBoard mainBoard;
     private Processor processor;
     private PowerSupply power;
-    private boolean on;
     private final String hello = "Basic WS configuration";
 
-    Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power) {
+    public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power) {
         this.hardDisk = hardDisk;
         this.memory = memory;
         this.mainBoard = mainBoard;
@@ -20,32 +17,22 @@ class Computer {
         this.power = power;
     }
 
-
-    /*раздел методов включения, вывода конфигурации и выключения ПК*/
-    void turnOn() {
+    public void turnOnOff(boolean on){
         if (on) {
-            System.out.println("Please, turn ON PC");
+            System.out.println("PC is turned ON");
         } else {
-            on = true;
-            System.out.println("PC is turned ON.");
+            System.out.println("PC is turned OFF");
+            }
         }
 
-    }
-
-    void turnOff() {
-        on = false;
-        System.out.println("PC is turned OFF");
-
-    }
-
-    void config() {
+    public void config() {
         System.out.println(hello);
         System.out.println("Components :" +
                 "\n1 " + hardDisk +
                 "\n2 " + memory +
                 "\n3 " + mainBoard +
                 "\n4 " + processor +
-                "\n5 " + power); // объекты не являются строковым типомб поэтому по умолчанию вызывается to String, т.к есть конкатенация.
+                "\n5 " + power); // объекты не являются строковым типом поэтому по умолчанию вызывается to String, т.к есть конкатенация.
     }
 
 }

@@ -26,8 +26,8 @@ public class HardDisk {
         this.sizeGb = sizeGb;
     }
 
-@Override
-    public String toString () {
+    @Override
+    public String toString() {
         return "HDD: " + model + ", size " + sizeGb + "Gb";
     }
 }

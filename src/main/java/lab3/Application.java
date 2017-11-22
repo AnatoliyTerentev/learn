@@ -1,7 +1,5 @@
 package lab3;
 
-import java.util.concurrent.Callable;
-
 public class Application {
 
 
@@ -14,12 +12,9 @@ public class Application {
         PowerSupply ps = new PowerSupply(1000, "FSP-023 ");
         Computer comp = new Computer(hdd, mem, mb, cpu, ps);
 
-        comp.turnOn();
+        comp.turnOnOff(true);
         comp.config();
-        comp.turnOff();
-
-
-
+        comp.turnOnOff(false);
 
     }
 
