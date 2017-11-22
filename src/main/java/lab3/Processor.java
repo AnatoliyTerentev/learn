@@ -11,6 +11,7 @@ public class Processor {
         this.hzCpu = hzCpu;
     }
 
+
     public String getModelCpu() {
         return modelCpu;
     }

@@ -4,6 +4,12 @@ public class PowerSupply {
     private int pow;
     private String modelSup;
 
+
+    PowerSupply(int pow, String modelSup) {
+        this.pow = pow;
+        this.modelSup = modelSup;
+    }
+
     public int getPow() {
         return pow;
     }
@@ -20,12 +26,7 @@ public class PowerSupply {
         this.modelSup = modelSup;
     }
 
-    PowerSupply(int pow, String modelSup) {
-        this.pow = pow;
-        this.modelSup = modelSup;
 
-
-    }
 
     @Override
     public String toString(){

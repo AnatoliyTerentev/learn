@@ -12,11 +12,10 @@ public class Application {
         PowerSupply ps = new PowerSupply(1000, "FSP-023 ");
         Computer comp = new Computer(hdd, mem, mb, cpu, ps);
 
-        comp.turnOnOff(true);
+        comp.turnOn(true);
+        Computer.hello();
         comp.config();
-        comp.turnOnOff(false);
+        comp.turnOff();
 
     }
-
-
 }

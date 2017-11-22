@@ -5,6 +5,11 @@ public class HardDisk {
     private String model;
     private int sizeGb;
 
+    HardDisk(String model, int sizeGb) {
+        this.model = model;
+        this.sizeGb = sizeGb;
+    }
+
     public String getModel() {
         return model;
     }
@@ -21,10 +26,7 @@ public class HardDisk {
         this.sizeGb = sizeGb;
     }
 
-    HardDisk(String model, int sizeGb) {
-        this.model = model;
-        this.sizeGb = sizeGb;
-    }
+
 
     @Override
     public String toString() {

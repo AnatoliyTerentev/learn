@@ -1,8 +1,8 @@
 package lab3;
 
 public class Memory {
-    /*раздел объявления приватных переменных класса и конструктора доступнго в пределах пакета*/
-    private final int mhz = 2133; //константа
+    /*раздел объявления приватных переменных класса */
+    private static int mhz = 2133;
     private int sizeRam;
     private String type;
 
@@ -13,8 +13,12 @@ public class Memory {
 
 
     /*раздел геттеров сеттеров для методов */
-    public int getMhz() {//только возвращение значения константы по частоте памяти
+    public int getMhz() {// возвращение значения частоты памяти из стат переменной
         return mhz;
+    }
+
+    public void setSizeRam(int sizeRam) {
+        this.sizeRam = sizeRam;
     }
 
     public int getSizeRam() {

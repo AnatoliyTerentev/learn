@@ -7,7 +7,8 @@ public class Computer {
     private MotherBoard mainBoard;
     private Processor processor;
     private PowerSupply power;
-    private final String hello = "Basic WS configuration";
+    public static String hello = "Basic WS configuration";
+
 
     public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power) {
         this.hardDisk = hardDisk;
@@ -17,22 +18,33 @@ public class Computer {
         this.power = power;
     }
 
-    public void turnOnOff(boolean on){
+    public static void hello() {//стат метод вывода строковой переменной
+        System.out.println(hello);
+    }
+
+    public void turnOn(boolean on){
         if (on) {
             System.out.println("PC is turned ON");
         } else {
-            System.out.println("PC is turned OFF");
+            on = true;
+            System.out.println("Please turn PC ON");
             }
         }
 
+        public void turnOff(){
+        System.out.println("PC is turned OFF");
+        }
+
+
+
+
     public void config() {
-        System.out.println(hello);
         System.out.println("Components :" +
                 "\n1 " + hardDisk +
                 "\n2 " + memory +
                 "\n3 " + mainBoard +
                 "\n4 " + processor +
-                "\n5 " + power); // объекты не являются строковым типом поэтому по умолчанию вызывается to String, т.к есть конкатенация.
+                "\n5 " + power); // переменные не являются строковым типом поэтому по умолчанию вызывается toString, т.к есть конкатенация.
     }
 
 }
