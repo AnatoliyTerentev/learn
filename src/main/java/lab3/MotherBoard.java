@@ -4,6 +4,7 @@ public class MotherBoard {
     private String modelMb;
     private int socketNumber;
 
+
     MotherBoard(String modelMb, int socketNumber) {
         this.modelMb = modelMb;
         this.socketNumber = socketNumber;

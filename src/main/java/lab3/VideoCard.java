@@ -20,6 +20,7 @@ public class VideoCard {
     }
 
 
+
     public String getModelVc() {
         return modelVc;
     }
@@ -48,6 +49,9 @@ public class VideoCard {
     @Override
     public String toString() {
         return " VideoCard: " + modelVc + ", Freq:" + mHzVc + "MHz, " + memVcGb + "Gb, ";
+    }
+    public String toString(String additionalInfo) {
+        return " VideoCard: " + modelVc + ", Freq:" + mHzVc + "MHz, " + memVcGb + "Gb, " + additionalInfo;
     }
 
 }

@@ -1,21 +1,17 @@
 package lab3;
 
 public class PowerSupply {
-    private int pow;
+    public int pow;
     private String modelSup;
+    private String formFactor;
 
+    {
+        pow = 1000;
+        formFactor = "ATX";
+    }
 
-    PowerSupply(int pow, String modelSup) {
-        this.pow = pow;
+    PowerSupply(String modelSup) {
         this.modelSup = modelSup;
-    }
-
-    public int getPow() {
-        return pow;
-    }
-
-    public void setPow(int pow) {
-        this.pow = pow;
     }
 
     public String getModelSup() {
@@ -30,7 +26,7 @@ public class PowerSupply {
 
     @Override
     public String toString(){
-        return "PWR: " + modelSup + ", power " + pow + "W";
+        return "PWR:" + modelSup + ", FF:"+ formFactor + ", power:" + pow + "W.";
 
     }
 

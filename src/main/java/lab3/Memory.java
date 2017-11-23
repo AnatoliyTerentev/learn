@@ -11,8 +11,6 @@ public class Memory {
         this.type = type;
     }
 
-
-    /*раздел геттеров сеттеров для методов */
     public int getMhz() {// возвращение значения частоты памяти из стат переменной
         return mhz;
     }

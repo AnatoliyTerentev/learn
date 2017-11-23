@@ -8,16 +8,18 @@ public class Computer {
     private Processor processor;
     private PowerSupply power;
     private VideoCard video;
+    private Case box;
     public static String hello;
 
 
-    public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power, VideoCard video) {
+    public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power, VideoCard video, Case box) {
         this.hardDisk = hardDisk;
         this.memory = memory;
         this.mainBoard = mainBoard;
         this.processor = processor;
         this.power = power;
         this.video = video;
+        this.box = box;
     }
 
     static {
@@ -48,7 +50,10 @@ public class Computer {
                 "\n3 " + mainBoard +
                 "\n4 " + processor +
                 "\n5 " + power +
-                "\n6" + video); // переменные не являются строковым типом поэтому по умолчанию вызывается toString, т.к есть конкатенация.
+                "\n6 " + video.toString("- can be integrated or external") +
+                "\n7 " + box ); // переменные не являются строковым типом поэтому по умолчанию вызывается toString, т.к есть конкатенация.
     }
+
+
 
 }
