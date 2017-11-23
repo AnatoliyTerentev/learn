@@ -1,4 +1,4 @@
-package mainpack;
+package lab2;
 
 public class ArraySearchMax {
     public static void main(String[] args) {

@@ -1,22 +1,28 @@
 package lab3;
 
 public class Computer {
-    /*Раздел объявления переменных класса Computer*/
+    /*Раздел объявления полей класса Computer*/
     private HardDisk hardDisk;
     private Memory memory;
     private MotherBoard mainBoard;
     private Processor processor;
     private PowerSupply power;
-    public static String hello = "Basic WS configuration";
+    private VideoCard video;
+    public static String hello;
 
 
-    public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power) {
+    public Computer(HardDisk hardDisk, Memory memory, MotherBoard mainBoard, Processor processor, PowerSupply power, VideoCard video) {
         this.hardDisk = hardDisk;
         this.memory = memory;
         this.mainBoard = mainBoard;
         this.processor = processor;
         this.power = power;
+        this.video = video;
     }
+
+    static {
+         hello = "Basic WS configuration";
+        }
 
     public static void hello() {//стат метод вывода строковой переменной
         System.out.println(hello);
@@ -35,16 +41,14 @@ public class Computer {
         System.out.println("PC is turned OFF");
         }
 
-
-
-
     public void config() {
         System.out.println("Components :" +
                 "\n1 " + hardDisk +
                 "\n2 " + memory +
                 "\n3 " + mainBoard +
                 "\n4 " + processor +
-                "\n5 " + power); // переменные не являются строковым типом поэтому по умолчанию вызывается toString, т.к есть конкатенация.
+                "\n5 " + power +
+                "\n6" + video); // переменные не являются строковым типом поэтому по умолчанию вызывается toString, т.к есть конкатенация.
     }
 
 }

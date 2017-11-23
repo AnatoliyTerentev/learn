@@ -10,7 +10,9 @@ public class Application {
         MotherBoard mb = new MotherBoard("GIGABYTE ARG-3222 ", 1151);
         Processor cpu = new Processor("Core i7-7700K ", 4,4.2);
         PowerSupply ps = new PowerSupply(1000, "FSP-023 ");
-        Computer comp = new Computer(hdd, mem, mb, cpu, ps);
+        VideoCard vc = new VideoCard( "dddd",5,5);
+        Computer comp = new Computer(hdd, mem, mb, cpu, ps, vc);
+
 
         comp.turnOn(true);
         Computer.hello();
