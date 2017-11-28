@@ -4,24 +4,21 @@ public class LabString {
     public LabString() {
     }
     public static void main(String[] args) {
-        String str = "Java-строго типизированный объектно-ориентированный язык программирования, " +
-                    "разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle ";
+        String str = "Java-строго типизированный объектно-ориентированный язык программирования, разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle ";
 
         /*1. Получить длину строки */
         System.out.println("1. String length consist of " + str.length()+ "symbols");
 
         /*2. Сравнить 2 строки без учета регистра */
         String str1 = new String();
-        String str2 = new String();
+        String str2 = new String("Java-строго типизированный объектно-ориентированный язык программирования, разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle ");
         str1 = "Java-строго типизированный объектно-ориентированный язык программирования, сравнить с str ";
-        str2 = "Java-строго типизированный объектно-ориентированный язык программирования, " +
-            "разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle";
-        String str4 = "Занести в пул литералов";
 
         System.out.print("2: str vs str1 is " + str.equalsIgnoreCase(str1));
         System.out.println("; str vs str2 is " + str.equalsIgnoreCase(str2));
 
         /*3. Создать новую строку с помощью конструктора и занести ее в пул литералов */
+        String str4 = "Занести в пул литералов";
         String strLit = new String("Занести в пул литералов");
         System.out.println("3: "+ strLit.intern());
 
