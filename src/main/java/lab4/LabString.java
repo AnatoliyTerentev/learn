@@ -3,7 +3,6 @@ package lab4;
 public class LabString {
     public LabString() {
     }
-
     public static void main(String[] args) {
         String str = "Java-строго типизированный объектно-ориентированный язык программирования, " +
                     "разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle ";
@@ -17,13 +16,14 @@ public class LabString {
         str1 = "Java-строго типизированный объектно-ориентированный язык программирования, сравнить с str ";
         str2 = "Java-строго типизированный объектно-ориентированный язык программирования, " +
             "разработанный компанией Sun Microsystems в последующем приобретённой компанией Oracle";
+        String str4 = "Занести в пул литералов";
 
         System.out.print("2: str vs str1 is " + str.equalsIgnoreCase(str1));
         System.out.println("; str vs str2 is " + str.equalsIgnoreCase(str2));
 
         /*3. Создать новую строку с помощью конструктора и занести ее в пул литералов */
         String strLit = new String("Занести в пул литералов");
-        System.out.println("3:"+ strLit.intern());
+        System.out.println("3: "+ strLit.intern());
 
         /*4. Объединить 2 строки при которых новый объект будет создан */
         String str3 = new String();
@@ -85,8 +85,5 @@ public class LabString {
 
         /*20. Поменять последовательность символов в строке на обратную. */
         System.out.println("20: " + stringBuilder.reverse());
-
-
-
         }
 }
